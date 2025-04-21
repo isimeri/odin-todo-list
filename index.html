@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>TODO LIST EPIC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <script src="script.js" type="module" defer></script>
+  </head>
+  <body>
+    <header>Tododo</header>
+    <div class="container">
+      <div class="form-wrapper hidden">
+        <form action="#" id="todo-form" data-id="">
+          <input type="text" id="todo-title-input" name="todoTitle" placeholder="Title">
+          <textarea name="todoDesc" id="todo-desc-input" placeholder="Description" rows="5"></textarea>
+          <div class="todo-form-lower">
+            <div>
+              <label for="todo-date-input">Due date<input type="date" name="todoDate" id="todo-date-input"></label>
+    
+              <fieldset>
+                <span>Priority</span>
+                <label id="prio-low-label">
+                  <input type="radio" name="todoPrio" id="prio-low-input" value="low">Low
+                </label>
+                <label id="prio-medium-label">
+                  <input type="radio" name="todoPrio" id="prio-medium-input" value="medium">Medium
+                </label>
+                <label id="prio-high-label">
+                  <input type="radio" name="todoPrio" id="prio-high-input" value="high">High
+                </label>
+              </fieldset>
+            </div>
+          <button type="submit" id="save-btn">Save</button>
+          </div>
+        </form>
+      </div>
+      
+      <div class="sidebar">
+        <div class="sidebar-inner">
+          <div class="sidebar-buttons">
+            <button class="quick-btn sidebar-btn" id="all"><span><i class="fa-solid fa-bars"></i>All Tasks</span></button>
+            <button class="quick-btn sidebar-btn" id="today"><span><i class="fa-solid fa-calendar-day"></i>Today</span></button>
+          </div>
+          <p class="projects-list-header">Projects</p>
+          <div class="projects-list">
+            <button class="project-btn sidebar-btn" id="default">Default</button>
+          </div>
+          <form action="#" id="project-form" class="hidden">
+            <label>Name <input type="text" name="project-name" placeholder="e.g. Gym" id="project-name-input"></label>
+            <div>
+              <button class="add-project-form-btn" type="submit">Add</button>
+              <button class="cancel-project-form-btn" type="button">Cancel</button>
+            </div>
+          </form>
+          <button class="new-project-btn">New Project</button>
+        </div>
+        <button class="new-todo-btn">New Todo</button>
+      </div>
+      <div class="main-display">
+        <div id="todo-list-container">
+          <ul>
+            <li data-id="2">
+              <div class="todo-header">
+                <p class="todo-title">Title 1</p>
+                <p class="todo-proj">proj1</p>
+              </div>
+              <p class="todo-desc">lorem ipsum dolor sit amet</p>
+              <p class="todo-date">2025-04-12</p>
+              <div class="todo-footer">
+                <p class="todo-prio">high</p>
+                <label class="todo-done-label"><input type="checkbox" name="todoDone" class="todo-done">Done</label>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+   </div>
+  </body>
+</html>
