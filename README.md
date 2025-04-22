@@ -1,10 +1,10 @@
-# Todo App -- [[live]]()
+# Todo App -- [[live]](https://isimeri.github.io/odin-todo-list/)
 
 A todo app with persistent storage and projects functionality used to group together related todos.
 
 ![todo app screenshot](https://i.imgur.com/4fjII2X.png)
 ___
-Click [here]() to check out the live app.
+Click [here](https://isimeri.github.io/odin-todo-list/) to check out the live app.
 ___
 
 
