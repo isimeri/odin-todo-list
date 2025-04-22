@@ -269,11 +269,14 @@ input[type="radio"]{
 .todo-header,.todo-footer{
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+}
+.todo-header > span{
+  display: flex;
 }
  
 .todo-title{
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: bold;
 }
 .todo-desc{

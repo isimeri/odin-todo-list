@@ -1,7 +1,7 @@
 import { getActiveProject } from "./project.js";
 const list = [];
 
-let lastId = 2;
+let lastId = 0;
  
 function findTodoByID(id){
   const intId = parseInt(id)
@@ -37,7 +37,8 @@ function saveTodo(formdata, id=null){
   const todoObj = formdataToObj(formdata);
   if(id){
     todoObj.id = parseInt(id);
-    list.splice(parseInt(id)-1,1,todoObj);
+    const index = list.findIndex(todo => todo.id === id);
+    list.splice(index,1,todoObj);
   } else {
     todoObj.id = ++lastId;
     list.push(todoObj);

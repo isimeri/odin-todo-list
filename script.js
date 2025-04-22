@@ -21,14 +21,14 @@ const todayTasksBtn = document.querySelector(".quick-btn#today");
 function init(){
   const {projects, todos, lastId} = loadFromStorage();
 
-  if(projects.length > 0){
+  if(projects?.length > 0){
     clearProjects();
     projects.forEach(proj => {
       addProject(proj);
     });
   }
 
-  if(todos.length > 0){
+  if(todos?.length > 0){
     todos.forEach(todo => {
       addTodo(todo)
     });
@@ -95,6 +95,7 @@ todoContainer.addEventListener("click", e => {
 
     const id = e.target.closest(".todo-item").dataset.id;
     deleteTodo(id);
+    saveToStorage(getProjects(), getList(), getLastId());
     displayFilteredTodos();
   }//cand apas "edit", se deschide formularul de todo si se populeaza cu informatiile din todo
   else if(e.target.closest(".edit-todo-btn")){
